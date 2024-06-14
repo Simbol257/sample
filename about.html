@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Max True</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500;700;900&display=swap');
+</style>
+<style type="text/css">
+*{
+margin:0;
+padding:0;
+font-family:"Montserrat";
+text-transform:uppercase;
+}
+ h2, p{
+width:84vw;
+}
+h1{
+font-size:3em;
+}
+h2{
+font-size:2em;
+text-align:left;
+font-weight:500;
+margin-bottom:0.5em;
+}
+h3{
+font-weight:600;
+font-size:1em;
+text-transform:capitalize;
+width:30vw;
+text-align:left;
+}
+a{
+color:#77b380;
+text-transform:none;
+}
+.about {
+width:84vw;
+display:flex;
+flex-direction:column;
+margin:3em 0;
+}
+.about--row {
+display:flex;
+justify-content:space-between;
+}
+.about--row p{
+width:25vw;
+font-size:0.85em;
+}
+p{
+text-align:left;
+font-size:0.92em;
+text-transform:none;
+margin-bottom:2.5em;
+}
+ul{
+margin-bottom:2.5em;
+}
+ul li{
+text-align:left;
+text-transform:none;
+margin-bottom:1.25em;
+list-style-position:inside;
+list-style-type:square;
+}
+img{
+width:84vw;
+height:400px;
+margin-bottom:2.5em;
+}
+.overlay{
+width:100vw;
+height:100vh;
+position:absolute;
+top:0;
+z-index:-1;
+background-color:rgba(50,50,50,0.35);
+}
+section{
+padding:6vh 8vw;
+text-align:center;
+}
+.nav{
+display:flex;
+justify-content:space-between;
+height:122px;
+}
+.nav--logo{
+transform:translateY(40px);
+width:150px;
+height:48px;
+margin:32px 0 0 32px;
+}
+#open-btn {
+margin:32px 32px 0 0;
+}
+.sidenav{
+width:50vw;
+height:100vh;
+background-color:#f4f4f4;
+position:absolute;
+left:-50vw;
+transition:all 1s;
+z-index:1000;
+}
+.sidenav section a{
+display:block;
+margin:36px 0;
+font-size:24px;
+text-decoration:none;
+color:#292524;
+}
+.sidenav--btn{
+position:absolute;
+top:15px;
+right:20px;
+}
+
+
+footer{
+padding:6vh 8vw;
+background:#e5e5e5;
+color:#292524;
+}
+footer div a{
+position:relative;
+left:24px;
+margin:12px 0 0 12px;
+}
+footer div:nth-child(1) {
+display:flex;
+flex-direction:column;
+}
+footer a{
+color:#292524;
+text-decoration:none;
+}
+footer img{
+width:32px;
+height:32px;
+}
+</style>
+</head>
+<body>
+<div class="sidenav">
+<section>
+<a href="index.html" >Home</a>
+<a href="about.html" >About</a>
+<a href="programs.html" >Programs</a>
+<a href="free-stuff.html" >Free Stuff</a>
+</section>
+<svg id="close-btn" class="sidenav--btn" xmlns="http://www.w3.org/2000/svg" height="48px" viewBox="0 -960 960 960" width="48px" fill="#292524"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg>
+</div>
+<nav class="nav" >
+<img src="logo.png" class="nav--logo">
+<svg id="open-btn"  class="nav--btn" xmlns="http://www.w3.org/2000/svg" height="48px" viewBox="0 -960 960 960" width="48px" fill="#292524"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg>
+</nav>
+
+<section>
+<h2>Who is max true? </h2>
+<p>Maksim Trukhanavets, known as "Max True," is a Belarusian calisthenics athlete and software engineer whose passion for the sport has led to an impressive career. In this athlete portrait, we'll explore Max's journey, from his early days in football and martial arts to his incredible Guinness record achievement in calisthenics.
+</p>
+<h2>Early Life and Athletic Background</h2>
+<p>Born on July 12, 1989, in Belarus, Max True began his athletic journey with football and martial arts before discovering calisthenics in 2004. His diverse athletic background and dedication to mastering new disciplines have played a crucial role in shaping Max into the exceptional athlete he is today.</p>
+<img src="max.jpg" >
+<div class="about">
+<div class="about--row">
+<h3>Full Name</h3>
+<p>Maksim Trukhanavets</p>
+</div>
+<div class="about--row">
+<h3>Nickname</h3>
+<p>Max True</p>
+</div>
+<div class="about--row">
+<h3>Height</h3>
+<p>172 cm (5 feet 7.7 inches)</p>
+</div>
+<div class="about--row">
+<h3>Weight</h3>
+<p>78kg(158.7 lbs)</p>
+</div>
+<div class="about--row">
+<h3>Birthplace</h3>
+<p>Belarus</p>
+</div>
+<div class="about--row">
+<h3>Nationality</h3>
+<p>Belarusian</p>
+</div>
+<div class="about--row">
+<h3>Birthday</h3>
+<p>12/07/1989</p>
+</div>
+<div class="about--row">
+<h3>Age</h3>
+<p>33 years old(as of 2023) </p>
+</div>
+<div class="about--row">
+<h3>Profession</h3>
+<p>Calisthenics Athlete, Software Engineer</p>
+</div>
+<div class="about--row">
+<h3>Upper Arm Circumference</h3>
+<p>41cm(16.1 inch) </p>
+</div>
+<div class="about--row">
+<h3>Started with Calisthenics</h3>
+<p>2004</p>
+</div>
+<div class="about--row">
+<h3>Sports Background</h3>
+<p>Football, Martial Arts</p>
+</div>
+
+</div>
+<h2>Calisthenics Career and Achievements</h2>
+<p>Max's calisthenics career is filled with numerous accomplishments, including:</p>
+<ul>
+<li>Champion of Belarus in Calisthenics</li>
+<li>Guinness record holder</li>
+<li>Mutant Cup 1st place</li>
+<li>Beast of the Barz 1st place</li>
+</ul>
+<p>His greatest success came after five years of preparation, when he broke the Guinness record for muscle-ups. This achievement, along with his other titles, has earned Max recognition as a formidable competitor in the calisthenics community.
+</p>
+<img src="certificate.jpg" >
+<h2>Training and Equipment</h2>
+<p>Max trains for 1.5 - 2 hours per session, six to seven times a week. His top 3 pieces of equipment for his workouts are the <a href="https://www.gornation.com/products/elite-weight-vest-10kg" >Weight Vest, </a><a href="https://www.gornation.com/products/premium-parallettes-max" > Parallettes, </a>and <a href="https://www.gornation.com/products/workout-rings-set" >Gymnastic Rings</a>. He particularly enjoys using <a href="https://www.gornation.com/products/premium-parallettes-pro" >GORNATION's Premium Parallettes</a> for his workouts. For beginners, Max advises consistency and patience in their training. When he struggles to find motivation, he pushes himself to do something easy and different, emphasizing the importance of maintaining a consistent routine.</p>
+<img src="training.jpg" >
+<h2>Nutrition and Supplements</h2>
+<p>Max follows a healthy, balanced diet, incorporating meat, vegetables, and dairy products. He believes that creatine can be beneficial but has only used it twice. For other supplements, Max remains skeptical about their significant effects on performance and recovery.</p>
+
+<h2>Integrating Calisthenics into Daily Life</h2>
+<p>As a software engineer, Max sees calisthenics as a way to take a break from his work. He finds that the sport helps improve his overall life, allowing him to maintain a healthy balance between work and fitness. Max: "Calisthenics doesn't interfere with your life; it helps your life be better."</p>
+
+<h2>Max's Message to the Calisthenics Community</h2>
+<p>As a successful athlete and software engineer, Maksim "Max True" Trukhanavets serves as an inspiration to those looking to pursue their passion for calisthenics. His dedication to the sport and determination to continually improve demonstrate the transformative power of calisthenics.</p>
+
+<p>Max's journey is a reminder that success in calisthenics and life comes from consistency, hard work, and the willingness to learn from our experiences. By integrating calisthenics into our daily lives, we can develop not only our physical strength but also our mental resilience and discipline.</p>
+
+<p>As Max's career continues to evolve, we can expect to see even more incredible feats of strength and skill from this software engineer turned calisthenics champion. His message of perseverance and balance will undoubtedly inspire countless others to embrace the world of calisthenics and unlock their full potential.</p>
+
+
+</section>
+
+<footer>
+<div>
+<h2>Useful Links</h2>
+<a href="index.html" >Home</a>
+<a href="about.html" >About</a>
+<a href="programs.html" >Programs</a>
+<a href="free-stuff.html" >Free Stuff</a>
+</div>
+<div>
+<h2>Social Media</h2>
+<a href="" ><img src="instagram.svg"></a>
+<a href="" ><img src="youtube.svg"></a>
+<a href="" ><img src="facebook.svg"></a>
+<a href="" ><img src="twitter.svg"></a>
+</div>
+<div>
+<a href="https://www.instagram.com/simbol257" ><p>PS:Click here to contact the web developer</p></a>
+</div>
+</footer>
+
+<script type="text/javascript">
+document.getElementById("open-btn").addEventListener("click", function(){
+document.querySelector(".sidenav").style.left = "0px"
+})
+document.getElementById("close-btn").addEventListener("click", function(){
+document.querySelector(".sidenav").style.left = "-50vw"
+})
+
+</script>
+</body>
+</html>

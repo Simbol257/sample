@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Max True</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500;600;700;900&display=swap');
+</style>
+<style type="text/css">
+*{
+margin:0;
+padding:0;
+font-family:"Montserrat";
+}
+h1{
+font-size:5em;
+font-weight:700;
+}
+h2{
+font-size:2em;
+text-align:left;
+font-weight:500;
+}
+.overlay{
+width:100vw;
+height:100vh;
+position:absolute;
+top:0;
+z-index:-1;
+background-color:rgba(50,50,50,0.35);
+}
+section{
+padding:6vh 8vw;
+text-align:center;
+}
+.nav{
+display:flex;
+justify-content:space-between;
+align-items:center;
+height:120px;
+}
+.nav--logo{
+width:150px;
+height:64px;
+margin-left:32px;
+}
+#open-btn {
+margin-right:32px;
+}
+.sidenav{
+width:50vw;
+height:100vh;
+background-color:#f4f4f4;
+position:absolute;
+left:-50vw;
+transition:all 1s;
+z-index:1000;
+}
+.sidenav section a{
+display:block;
+margin:36px 0;
+font-size:24px;
+text-decoration:none;
+color:#292524;
+}
+.sidenav--btn{
+position:absolute;
+top:15px;
+right:20px;
+}
+
+.plan{
+width:350px;
+padding:1px;
+border-radius:16px;
+margin:2em auto;
+background:#f4f4f4;
+box-shadow:-7px -7px 53px #9d9d9d,7px 7px 53px #ffffff;
+}
+.plan--price {
+width:350px;
+height:250px;
+background:#85be9a;
+border-radius:16px;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+color:#f5f5f5;
+}
+.plan--details{
+width:350px;
+height:150px;
+box-sizing:border-box;
+margin:12px 0;
+}
+.plan--details span{
+display:flex;
+margin:0 100px;
+}
+.plan--details img{
+width:16px;
+height:16px;
+margin-right:6px;
+}
+.plan div{
+width:350px;
+}
+.plan--buy_btn {
+width:122px;
+box-sizing:border-box;
+padding:12px 18px;
+background:#85be9a;
+border-radius:8px;
+color:#f5f5f5;
+font-weight:600;
+text-decoration:none;
+display:block;
+margin:24px auto;
+}
+.plan:nth-child(2) .plan--price ,.plan:nth-child(2) .plan--buy_btn{
+background:#d1c847;
+}
+.plan:nth-child(3) .plan--price ,.plan:nth-child(3) .plan--buy_btn{
+background:#d14747;
+}
+
+footer{
+padding:6vh 8vw;
+background:#e5e5e5;
+color:#292524;
+}
+footer div a{
+position:relative;
+left:24px;
+margin:12px 0 0 12px;
+}
+footer div:nth-child(1) {
+display:flex;
+flex-direction:column;
+}
+footer a{
+color:#292524;
+text-decoration:none;
+}
+footer img{
+width:32px;
+height:32px;
+}
+</style>
+</head>
+<body>
+<div class="sidenav">
+<section>
+<a href="index.html" >Home</a>
+<a href="about.html" >About</a>
+<a href="programs.html" >Programs</a>
+<a href="free-stuff.html" >Free Stuff</a>
+</section>
+<svg id="close-btn" class="sidenav--btn" xmlns="http://www.w3.org/2000/svg" height="48px" viewBox="0 -960 960 960" width="48px" fill="#292524"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg>
+</div>
+<nav class="nav" >
+<img src="logo.png" class="nav--logo">
+<svg id="open-btn"  class="nav--btn" xmlns="http://www.w3.org/2000/svg" height="48px" viewBox="0 -960 960 960" width="48px" fill="#292524"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg>
+</nav>
+
+<main>
+<div class="plan">
+<div class="plan--price">
+<h2>Basic</h2><h1>$49</h1><h2>One Time</h2>
+</div>
+<div class="plan--details">
+<div>
+<span><img src="tick.svg" ><p>Video Guide</p></span>
+<span><img src="tick.svg" ><p>PDF Guide</p></span>
+</div>
+<div>
+<span><img src="cross.svg" ><p>Text Support</p></span>
+<span><img src="cross.svg" ><p>Live Calls</p></span>
+<span><img src="cross.svg" ><p>Nutrition Guide</p></span>
+<span><img src="cross.svg" ><p>1-1 Coaching</p></span>
+</div>
+</div>
+<div>
+<a href="" class="plan--buy_btn">BUY NOW</a>
+</div>
+</div>
+
+<div class="plan">
+<div class="plan--price">
+<h2>Standard</h2><h1>$349</h1><h2>Monthly</h2>
+</div>
+<div class="plan--details">
+<div>
+<span><img src="tick.svg" ><p>Video Guide</p></span>
+<span><img src="tick.svg" ><p>PDF Guide</p></span>
+
+<span><img src="tick.svg" ><p>Text Support</p></span>
+<span><img src="tick.svg" ><p>Live Calls</p></span>
+<span><img src="tick.svg" ><p>Nutrition Guide</p></span>
+</div>
+<div>
+<span><img src="cross.svg" ><p>1-1 Coaching</p></span>
+</div>
+</div>
+<div>
+<a href="" class="plan--buy_btn">BUY NOW</a>
+</div>
+</div>
+
+<div class="plan">
+<div class="plan--price">
+<h2>Premium</h2><h1>$749</h1><h2>Monthly</h2>
+</div>
+<div class="plan--details">
+<div>
+<span><img src="tick.svg" ><p>Video Guide</p></span>
+<span><img src="tick.svg" ><p>PDF Guide</p></span>
+<span><img src="tick.svg" ><p>Text Support</p></span>
+<span><img src="tick.svg" ><p>Live Calls</p></span>
+<span><img src="tick.svg" ><p>Nutrition Guide</p></span>
+<span><img src="tick.svg" ><p>1-1 Coaching</p></span>
+</div>
+</div>
+<div>
+<a href="" class="plan--buy_btn">BUY NOW</a>
+</div>
+</div>
+
+</main>
+
+<footer>
+<div>
+<h2>Useful Links</h2>
+<a href="index.html" >Home</a>
+<a href="about.html" >About</a>
+<a href="programs.html" >Programs</a>
+<a href="free-stuff.html" >Free Stuff</a>
+</div>
+<div>
+<h2>Social Media</h2>
+<a href="" ><img src="instagram.svg"></a>
+<a href="" ><img src="youtube.svg"></a>
+<a href="" ><img src="facebook.svg"></a>
+<a href="" ><img src="twitter.svg"></a>
+</div>
+<div>
+<a href="https://www.instagram.com/simbol257" ><p>PS:Click here to contact the web developer</p></a>
+</div>
+</footer>
+
+<script type="text/javascript">
+document.getElementById("open-btn").addEventListener("click", function(){
+document.querySelector(".sidenav").style.left = "0px"
+})
+document.getElementById("close-btn").addEventListener("click", function(){
+document.querySelector(".sidenav").style.left = "-50vw"
+})
+
+</script>
+</body>
+</html>

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Max True</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500;700;900&display=swap');
+</style>
+<style type="text/css">
+*{
+margin:0;
+padding:0;
+font-family:"Montserrat";
+}
+h1{
+font-size:3em;
+}
+h2{
+font-size:2em;
+text-align:left;
+font-weight:500;
+}
+.overlay{
+width:100vw;
+height:100vh;
+position:absolute;
+top:0;
+z-index:-1;
+background-color:rgba(50,50,50,0.35);
+}
+section{
+padding:6vh 8vw;
+text-align:center;
+}
+.nav{
+display:flex;
+justify-content:space-between;
+align-items:center;
+height:120px;
+}
+.nav--logo{
+width:150px;
+height:64px;
+margin-left:32px;
+}
+#open-btn {
+margin-right:32px;
+}
+.sidenav{
+width:50vw;
+height:100vh;
+background-color:#f4f4f4;
+position:absolute;
+left:-50vw;
+transition:all 1s;
+z-index:1000;
+}
+.sidenav section a{
+display:block;
+margin:36px 0;
+font-size:24px;
+text-decoration:none;
+color:#292524;
+}
+.sidenav--btn{
+position:absolute;
+top:15px;
+right:20px;
+}
+
+
+footer{
+padding:6vh 8vw;
+background:#e5e5e5;
+color:#292524;
+}
+footer div a{
+position:relative;
+left:24px;
+margin:12px 0 0 12px;
+}
+footer div:nth-child(1) {
+display:flex;
+flex-direction:column;
+}
+footer a{
+color:#292524;
+text-decoration:none;
+}
+footer img{
+width:32px;
+height:32px;
+}
+</style>
+</head>
+<body>
+<div class="sidenav">
+<section>
+<a href="index.html" >Home</a>
+<a href="about.html" >About</a>
+<a href="programs.html" >Programs</a>
+<a href="free-stuff.html" >Free Stuff</a>
+</section>
+<svg id="close-btn" class="sidenav--btn" xmlns="http://www.w3.org/2000/svg" height="48px" viewBox="0 -960 960 960" width="48px" fill="#292524"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg>
+</div>
+<nav class="nav" >
+<img src="logo.png" class="nav--logo">
+<svg id="open-btn"  class="nav--btn" xmlns="http://www.w3.org/2000/svg" height="48px" viewBox="0 -960 960 960" width="48px" fill="#292524"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg>
+</nav>
+
+
+
+<footer>
+<div>
+<h2>Useful Links</h2>
+<a href="index.html" >Home</a>
+<a href="about.html" >About</a>
+<a href="programs.html" >Programs</a>
+<a href="free-stuff.html" >Free Stuff</a>
+</div>
+<div>
+<h2>Social Media</h2>
+<a href="" ><img src="instagram.svg"></a>
+<a href="" ><img src="youtube.svg"></a>
+<a href="" ><img src="facebook.svg"></a>
+<a href="" ><img src="twitter.svg"></a>
+</div>
+<div>
+<a href="https://www.instagram.com/simbol257" ><p>PS:Click here to contact the web developer</p></a>
+</div>
+</footer>
+
+<script type="text/javascript">
+document.getElementById("open-btn").addEventListener("click", function(){
+document.querySelector(".sidenav").style.left = "0px"
+})
+document.getElementById("close-btn").addEventListener("click", function(){
+document.querySelector(".sidenav").style.left = "-50vw"
+})
+
+</script>
+</body>
+</html>

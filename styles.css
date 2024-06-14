@@ -1,0 +1,19 @@
+/**{
+margin:0;
+padding:0;
+overflow:hidden;
+}
+section{
+padding:50px 40px;
+}
+section:nth-child(1) {
+height:750px;
+background:url("hero.jpg");
+background-position:left;
+background-size:cover;
+background-repeat:no-repeat;
+}
+.nav--logo{
+width:150px;
+height:75px;
+}*/
