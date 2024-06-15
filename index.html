@@ -11,6 +11,7 @@
 margin:0;
 padding:0;
 font-family:'Montserrat';
+box-sizing:border-box;
 }
 h1{
 font-size:3em;
@@ -20,6 +21,9 @@ font-size:2em;
 text-align:left;
 font-weight:500;
 }
+section{
+padding:6vh 8vw;
+}
 .overlay{
 width:100vw;
 height:100vh;
@@ -27,10 +31,6 @@ position:absolute;
 top:0;
 z-index:-1;
 background-color:rgba(50,50,50,0.35);
-}
-section{
-padding:6vh 8vw;
-text-align:center;
 }
 .nav{
 display:flex;
@@ -75,9 +75,9 @@ font-size:1em;
 font-weight:400;
 }
 .cta--btn{
-width:180px;
-height:24px;
+max-width:150px;
 padding:12px;
+display:inline;
 border-radius:4px;
 background-color:#bbf7d0;
 z-index:100;
@@ -88,11 +88,11 @@ color:#292524;
 font-size:1em;
 }
 .sidenav{
-width:50vw;
+width:70vw;
 height:100vh;
 background-color:#f4f4f4;
 position:absolute;
-left:-50vw;
+left:-70vw;
 transition:all 1s;
 z-index:1000;
 }
@@ -460,7 +460,7 @@ document.getElementById("open-btn").addEventListener("click", function(){
 document.querySelector(".sidenav").style.left = "0px"
 })
 document.getElementById("close-btn").addEventListener("click", function(){
-document.querySelector(".sidenav").style.left = "-50vw"
+document.querySelector(".sidenav").style.left = "-70vw"
 })
 var image_index = 0
 var image_src 
