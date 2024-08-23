@@ -1,502 +1,201 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-<title>Max True</title>
-<link href="styles.css" rel="stylesheet"  >
-<style>
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500;700;900&display=swap');
-</style>
-<style type="text/css">
-*{
-margin:0;
-padding:0;
-font-family:'Montserrat';
-box-sizing:border-box;
-}
-h1{
-font-size:3em;
-}
-h2{
-font-size:2em;
-text-align:left;
-font-weight:500;
-}
-section{
-padding:6vh 8vw;
-}
-.overlay{
-width:100vw;
-height:100vh;
-position:absolute;
-top:0;
-z-index:-1;
-background-color:rgba(50,50,50,0.35);
-}
-.nav{
-display:flex;
-justify-content:space-between;
-align-items:top;
-}
-.nav--logo{
-width:150px;
-height:64px;
-}
-.hero{
-position:relative;
-background:url("max.jpg");
-background-attachment:fixed;
-background-size:cover;
-background-repeat:no-repeat;
-height:100vh;
-color:#e5e5e5;
-z-index:2;
-}
-.hero--text {
-position:relative;
-top:8vh;
-display:flex;
-flex-direction:column;
-}
-.hero--text>*{
-margin:9px 0;
-text-align:left;
-}
-.hero h1{
-width:70vw;
-text-transform:uppercase;
-font-size:2.5em;
-text-shadow:2px 2px 10px #000;
-font-weight:700;
-}
-.hero p{
-width:70vw;
-text-transform:uppercase;
-font-size:1em;
-font-weight:400;
-}
-.cta--btn{
-max-width:150px;
-padding:12px;
-display:inline;
-border-radius:4px;
-background-color:#bbf7d0;
-z-index:100;
-text-transform:uppercase;
-text-align:center;
-text-decoration:none;
-color:#292524;
-font-size:1em;
-}
-.sidenav{
-width:70vw;
-height:100vh;
-background-color:#f4f4f4;
-position:absolute;
-left:-70vw;
-transition:all 1s;
-z-index:1000;
-}
-.sidenav section a{
-display:block;
-margin:36px 0;
-font-size:24px;
-text-decoration:none;
-color:#292524;
-}
-.sidenav--btn{
-position:absolute;
-top:15px;
-right:20px;
-}
-
-
-.strength--stats {
-width:100vw;
-background:#fff;
-}
-.strength--stats section:nth-child(2) {
-display:flex;
-flex-direction:column;
-align-items:center;
-padding-top:0;
-}
-.strength--stats div{
-padding-top:0;
-width:70vw;
-border-radius:6px;
-background:#f4f4f4;
-box-shadow:-7px -7px 53px #9d9d9d,7px 7px 53px #ffffff;
-padding:8px;
-text-align:left;
-display:flex;
-flex-direction:column;
-align-items:center;
-}
-.strength--stats div:nth-child(1) {
-margin-bottom:100px;
-}
-.strength--stats div>*{
-margin-bottom:8px;
-}
-.strength--stats img{
-width:70vw;
-height:500px;
-border-radius:6px;
-}
-.strength--stats a{
-width:110px;
-color:#292524;
-text-decoration:none;
-background-color:#bbf7d0;
-padding:12px;
-}
-
-.program--about ul{
-list-style-type:none;
-text-align:left;
-}
-.program--about p{
-font-size:1.5em;
-}
-.program--about li{
-display:flex;
-align-items:center;
-margin:9px 0 0 36px;
-}
-.program--about a{
-position:relative;
-top:18px;
-left:36px;
-}
-
-.testimonials--parent {
-background:#e5e5e5;
-height:650px;
-display:flex;
-flex-direction:column;
-justify-content:center;
-}
-.testimonials{
-position:relative;
-}
-.testimonial{
-width:100%;
-height:500px;
-}
-.testimonial--btn {
-background:#f4f4f4;
-border-radius:50%;
-width:48px;
-height:48px;
-position:absolute;
-display:flex;
-justify-content:center;
-align-items:center;
-}
-.testimonial--btn:nth-child(1) {
-top:50%;
-left:-24px;
-}
-.testimonial--btn:nth-child(2) {
-top:50%;
-right:-24px;
-}
-.faq--wrapper {
-height:350px
-display:flex;
-flex-direction:column;
-justify-content:center;
-}
-.faq>*{
-transition:all 1s;
-}
-.question {
-margin-top:28px;
-display:flex;
-justify-content:space-between;
-align-items:center;
-}
-.question h2:nth-child(1) {
-font-size:1.2em;
-font-weight:700;
-}
-.question h2:nth-child(2) {
-font-size:2em;
-width:50px;
-text-align:right;
-}
-.answer{
-margin-top:7px;
-display:none;
-}
-.answer:nth-child(1) {
-display:block;
-}
-.answer p{
-font-size:0.9em;
-text-transform:none;
-text-align:left;
-}
-
-form{
-height:350px;
-display:flex;
-flex-direction:column;
-justify-content:center;
-padding:6vh 8vw;
-}
-label{
-display:flex;
-flex-direction:column;
-}
-input, textarea{
-width:50vw;
-border:1px solid #e5e5e5;
-border-radius:6px;
-background-color:#f5f5f5;
-margin:12px 0;
-height:24px;
-outline:none;
-text-transform:none;
-}
-textarea{
-height:100px;
-}
-button.cta--btn {
-height:48px;
-outline:none;
-border:none;
-}
-
-footer{
-padding:6vh 8vw;
-background:#e5e5e5;
-color:#292524;
-}
-footer div a{
-position:relative;
-left:24px;
-margin:12px 0 0 12px;
-}
-footer div:nth-child(1) {
-display:flex;
-flex-direction:column;
-}
-footer a{
-color:#292524;
-text-decoration:none;
-}
-footer img{
-width:32px;
-height:32px;
-}
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CloudPro.Ai</title>
+    
+    <!-- Color Palette : https://colorhunt.co/palette/fb929effdfdffff6f6aedefc  -->
+    
+    <!--Styles Reset -->
+    <style type="text/css">
+    /*
+    1. Use a more-intuitive box-sizing model.
+    */
+    *, *::before, *::after {
+    box-sizing: border-box;
+    line-height:1.2;
+    }
+    /*
+    2. Remove default margin
+    */
+    * {
+    margin: 0;
+    padding: 0;
+    }
+    /*
+    Typographic tweaks!
+    3. Add accessible line-height
+    4. Improve text rendering
+    */
+    body {
+    -webkit-font-smoothing: antialiased;
+    }
+    /*
+    5. Improve media defaults
+    */
+    img, iframe, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+    }
+    /*
+    6. Remove built-in form typography styles
+    */
+    input, button, textarea, select {
+    font: inherit;
+    }
+    /*
+    7. Avoid text overflows
+    */
+    p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+    }
+    /*
+    8. Create a root stacking context
+    */
+    #root, #__next {
+    isolation: isolate;
+    }
+    </style>    
+    
+    <style type="text/css">
+    *{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:"Montserrat";
+    }
+    body{
+    
+    }
+    .main{
+    padding:2rem 0;
+    min-height:100svh;
+    background-image: linear-gradient(
+    135deg,
+    hsl(353deg 93% 78%) 0%,
+    hsl(355deg 99% 84%) 25%,
+    hsl(357deg 100% 89%) 50%,
+    hsl(359deg 100% 93%) 75%,
+    hsl(0deg 100% 98%) 100%
+    );
+    }
+    .nav{
+    position:relative;
+    margin:0 auto;
+    border-radius:0.5rem;
+    background: rgba(0,0,0,0.8);
+    -webkit-backdrop-filter: blur(8px);
+    backdrop-filter: blur(8px); 
+    }
+    .nav,.sidenav__nav{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    width:80vw;
+    height:fit-content;
+    padding: 1rem 0.75rem;
+    }
+    .nav__logo,.sidenav__logo {
+    width:7rem;
+    height:2rem;
+    }
+    .nav__menu-btn,.sidenav__menu-btn {
+    width:3rem;
+    height:2rem;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    color:#fff;
+    }
+    .sidenav{
+    width:80vw;
+    height:80svh;
+    margin:0 auto;
+    position:absolute;
+    top:5rem;
+    left:-100vw;
+    transition:all 1.4s;
+    background:rgba(255,255,255,0.25);
+    -webkit-backdrop-filter:blur(10px);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255,0.15);
+    border-radius:0.5rem;
+    }
+    .sidenav__links{
+    display:flex;
+    flex-direction:column;
+    text-align:left;
+    padding:2rem 0;
+    }
+    .sidenav__links a{
+    text-decoration:none;
+    color:#fff;
+    font-size:1.5rem;
+    font-weight:700;
+    margin:1.2rem 2rem;
+    display:flex;
+    align-items:center;
+    }
+    
+    
+    </style>
+    <!--Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,200,0,-25" />
 </head>
+
 <body>
-
-<div class="hero" >
-<div class="overlay"></div>
-<div class="sidenav">
-<section>
-<a href="index.html" >Home</a>
-<a href="about.html" >About</a>
-<a href="programs.html" >Programs</a>
-<a href="free-stuff.html" >Free Stuff</a>
-</section>
-<svg id="close-btn" class="sidenav--btn" xmlns="http://www.w3.org/2000/svg" height="48px" viewBox="0 -960 960 960" width="48px" fill="#040404"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg>
-</div>
-<section>
-<nav class="nav" >
-<img src="logo.png" class="nav--logo">
-<svg id="open-btn"  class="nav--btn" xmlns="http://www.w3.org/2000/svg" height="48px" viewBox="0 -960 960 960" width="48px" fill="#f7f7f7"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg>
-</nav>
-</section>
-<section class="hero--text" >
-<h1>Max True</h1>
-<p>I am a Calisthenics Athlete with <b><u>20 years</u></b> of experience and multiple <b><u>world records</u></b>.</p>
-<p>I've trained <u><b>100+ students</b></u> through online coaching. </p>
-<a href="programs.html" class="cta--btn" >View Program</a>
-</section>
-</div>
-
-<div class="strength--stats">
-<section>
-<h2>My Achievements</h2>
-</section>
-<section>
-<div>
-<img src="muscleup.jpg">
-<h4>32 Muscle Ups Record</h4>
-<a href="https://youtu.be/Oxgva2h65Es?si=q1rkz_j2wNtDAdHo" >Watch Clip</a>
-</div>
-<div>
-<img src="pullup.jpg">
-<h4>Most pullups in 1 minute +40 lb</h4>
-<a href="https://youtu.be/0UlwXsQMvKA?si=mVTxJ-f03Y9Ck01a" >Watch Clip</a>
-</div>
-</section>
-</div>
-
-
-
-<div class="program--about" >
-<section>
-<h2>Program Overview</h2>
-<ul>
-<li><p>&#10147</p> Endurance Based training program</li>
-<li><p>&#10147</p> Bodyweight Only</li>
-<li><p>&#10147</p> pull up and dip bar only</li>
-<li><p>&#10147</p> 8 week cycles</li>
-<li><p>&#10147</p> bonus:free diet guide available</li>
-<li><p>&#10147</p> weekly ama</li>
-<a href="programs.html" class="cta--btn">Learn More</a>
-</ul>
-</section>
-</div>
-
-
-<div>
-<section class="testimonials--parent" >
-<h2>Testimonials</h2>
-<div class="testimonials--parent" >
-<div class="testimonials">
-<div class="testimonial--btn"><svg xmlns="http://www.w3.org/2000/svg" height="36px" viewBox="0 -960 960 960" width="36px" fill="#5f6368"><path d="m274-450 248 248-42 42-320-320 320-320 42 42-248 248h526v60H274Z"/></svg></div>
-<div class="testimonial--btn"><svg xmlns="http://www.w3.org/2000/svg" height="36px" viewBox="0 -960 960 960" width="36px" fill="#5f6368"><path d="M686-450H160v-60h526L438-758l42-42 320 320-320 320-42-42 248-248Z"/></svg></div>
-<img class="testimonial" src="0.jpeg">
-</div>
-</div>
-</section>
-
-</div>
-
-<div>
-<section>
-<h2>FAQ<span style="text-transform:none;font-weight:500;" >s</span></h2>
-<div class="faq--wrapper">
-<div class="faq">
-<div class="question">
-<h2>Do i need to have a gym membership?</h2>
-<h2>+</h2>
-</div>
-<div class="answer">
-<p>No! You don’t need a gym to fire up your fitness. We have home based workout plans available . Having one helps, but isnt required. </p>
-</div>
-</div>
-
-<div class="faq">
-<div class="question">
-<h2>What if i find the program too difficult? </h2>
-<h2>+</h2>
-</div>
-<div class="answer">
-<p>All plans start with an introductory week, this allows you to get to know the exercises and grasp how the workouts flow. But the workload will be customised to you, to make sure you are training most effectively for you. If you are really struggling, fire us an email.</p>
-</div>
-</div>
-
-<div class="faq">
-<div class="question">
-<h2>Can i follow this program alongside my other sport/program? </h2>
-<h2>+</h2>
-</div>
-<div class="answer">
-<p>Of course! The program offers a range of workout plans that suit all lifestyles. Most plans would probably enhance performance in a multitude of sports.</p>
-</div>
-</div>
-
-<div class="faq">
-<div class="question">
-<h2>How do i know what exercises to choose from the given range? </h2>
-<h2>+</h2>
-</div>
-<div class="answer">
-<p>All exercise options given for workouts are all safe and effective options. We have included a range to suit all of our client’s needs. If you’re new to training, why not try out the exercises and find out what ones your find best for you. No exercise options trumps another, all will help you reach those goals.</p>
-</div>
-</div>
-</div>
-</section>
-</div>
-<hr>
-<form
-  action="https://formspree.io/f/xwkgdglb"
-  method="POST"
->
-<h2>Message me</h2><br><br>
-  <label>
-    Your email:
-    <input type="email" name="email" required="required" >
-  </label>
-  <label>
-    Your message:
-    <textarea type="text"  name="message" required="required" ></textarea>
-  </label>
-  <!-- your other form fields go here -->
-  <button class="cta--btn"  type="submit">Send</button>
-</form>
-
-
-<footer>
-<div>
-<h2>Useful Links</h2>
-<a href="index.html" >Home</a>
-<a href="about.html" >About</a>
-<a href="programs.html" >Programs</a>
-<a href="free-stuff.html" >Free Stuff</a>
-</div>
-<div>
-<h2>Social Media</h2>
-<a href="" ><img src="instagram.svg"></a>
-<a href="" ><img src="youtube.svg"></a>
-<a href="" ><img src="facebook.svg"></a>
-<a href="" ><img src="twitter.svg"></a>
-</div>
-<div>
-<a href="https://www.instagram.com/simbol257" ><p>PS:Click here to contact the web developer</p></a>
-</div>
-</footer>
-
-<script type="text/javascript">
-document.getElementsByClassName("answer")[0].style.display = "block"
-document.getElementById("open-btn").addEventListener("click", function(){
-document.querySelector(".sidenav").style.left = "0px"
-})
-document.getElementById("close-btn").addEventListener("click", function(){
-document.querySelector(".sidenav").style.left = "-70vw"
-})
-var image_index = 0
-var image_src 
-document.getElementsByClassName("testimonial--btn")[0].addEventListener("click", function(){
-if(image_index == 0){
-image_index = 4
-}
-else{
-image_index = image_index - 1
-}
-image_src = image_index + ".jpeg"
-document.getElementsByClassName("testimonial")[0].setAttribute("src", image_src) 
-})
-
-document.getElementsByClassName("testimonial--btn")[1].addEventListener("click", function(){
-if(image_index == 4){
-image_index = 0
-}
-else{
-image_index = image_index + 1
-}
-image_src = image_index + ".jpeg"
-document.getElementsByClassName("testimonial")[0].setAttribute("src", image_src) 
-})
-
-//   FAQs
-var i = 0
-var j = 0
-for(i=0;i<4;i++){
-document.getElementsByClassName("question")[i].addEventListener("click", function(){
-for(j=0;j<4;j++){
-document.getElementsByClassName("answer")[j].style.display = "none"
-}
-this.nextElementSibling.style.display = "block" 
-})
-}
-</script>
+    <main class="main">
+    <nav class="nav">
+    <img class="nav__logo" src="https://www.cloudpro.ai/Image/logo/logo-white.svg" > <!-- Replace with logo.png-->
+    <div class="nav__menu-btn"><i class="material-symbols-rounded" style="font-size:36px;">
+    menu
+    </i></div>
+    <div class="sidenav">
+    <div class="sidenav__nav">
+    <img class="sidenav__logo" src="https://www.cloudpro.ai/Image/logo/logo-white.svg" > <!-- Replace with logo.png-->
+    <div class="sidenav__menu-btn"><i class="material-symbols-rounded" style="font-size:36px;">
+    close
+    </i></div>
+    </div>
+    <div class="sidenav__links">
+    <a href="" >Case Studies</a>
+    <a href="" >About Us</a>
+    <a href="" >Blogs</a>
+    <a href="" >Services</a>
+    </div>
+    </div>
+    </nav>
+    
+    <div class="hero">
+    <h1>Data, AI and Software Cloud Services Consultant</h1>
+    <p>We're Gen AI-Ready and Eager to Collaborate. Let's Assess Your Business and Infrastructure Readiness for the Ultimate Technological Leap.</p>
+    <div class="hero--btns">
+    <a href="" >Contact Us</a>
+    <a href="" >Book a free call</a>
+    </div>
+    </div>
+    
+    </main>
+    
+    
+    <!--JavaScript-->
+    <script>
+    document.getElementsByClassName("nav__menu-btn")[0].addEventListener("click",function(){
+    document.getElementsByClassName("sidenav")[0].style.left = 0
+    })
+    document.getElementsByClassName("sidenav__menu-btn")[0].addEventListener("click",function(){
+    document.getElementsByClassName("sidenav")[0].style.left = "-100vw"
+    })
+    
+    
+    
+    
+    </script>
 </body>
+
 </html>
